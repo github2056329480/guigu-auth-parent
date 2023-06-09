@@ -1,5 +1,4 @@
-package com.atguigu.yuanwenjian.vo;
-
+package com.atguigu.model.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -7,14 +6,13 @@ import lombok.Data;
 
 import java.util.List;
 
-@ApiModel(description = "分配菜单")
 @Data
+@ApiModel(description = "分配角色列表")
 public class AssginRoleVo {
 
     @ApiModelProperty(value = "用户id")
-    private String userId;
+    private Long userId;
 
     @ApiModelProperty(value = "角色id列表")
-    private List<String> roleIdList;
-
+    private List<Long> roleIdList;
 }

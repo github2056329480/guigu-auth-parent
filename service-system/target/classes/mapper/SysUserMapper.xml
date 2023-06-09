@@ -8,6 +8,15 @@
     <sql id="columns">
         id,username,password,name,phone,head_url,post_id,dept_id,description,status,create_time,update_time,is_deleted
     </sql>
+    <update id="updateStatusById">
+        update sys_user
+        <set>
+            status = #{status}
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
 
     <select id="selectPage" resultMap="SysUserMap">
         select <include refid="columns"></include>

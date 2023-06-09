@@ -30,4 +30,17 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         return sysUserMapper.selectPage(pageParam, userQueryVo);
     }
 
+    @Override
+    public void updateStatus(Long id, Integer status) {
+        //方法1：
+        //SysUser sysUser = sysUserMapper.selectById(id);
+        //sysUser.setStatus(status);
+        //sysUserMapper.updateById(sysUser);
+
+        //方法2：
+        sysUserMapper.updateStatusById(id,status);
+
+
+    }
+
 }

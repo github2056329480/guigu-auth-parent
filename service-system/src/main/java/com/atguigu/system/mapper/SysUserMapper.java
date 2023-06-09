@@ -23,4 +23,6 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
 
     IPage<SysUser> selectPage(Page<SysUser> page, @Param("vo") SysUserQueryVo userQueryVo);
 
+    //更新状态之 方法2
+    void updateStatusById(@Param("id") Long id, @Param("status") Integer status);
 }

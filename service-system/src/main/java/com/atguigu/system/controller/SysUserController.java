@@ -3,7 +3,9 @@ package com.atguigu.system.controller;
 import com.atguigu.common.result.Result;
 import com.atguigu.model.system.SysUser;
 import com.atguigu.model.vo.SysUserQueryVo;
+import com.atguigu.system.service.SysRoleService;
 import com.atguigu.system.service.SysUserService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
@@ -42,6 +44,11 @@ public class SysUserController {
 
     //获取用户
     //@ApiOperation(value = "获取用户")
+    @GetMapping("/get/{id}")
+    public Result getById(@PathVariable Long id){
+        SysUser sysUser = sysUserService.getById(id);
+        return Result.ok(sysUser);
+    }
 
     //保存用户
     //@ApiOperation(value = "保存用户")
@@ -52,7 +59,12 @@ public class SysUserController {
     }
 
     //更新用户
-    //@ApiOperation(value = "更新用户")
+    @ApiOperation(value = "更新用户")
+    @PostMapping("update")
+    public Result updateById(@RequestBody SysUser sysUser){
+        sysUserService.updateById(sysUser);
+        return Result.ok();
+    }
 
     //删除用户
     @ApiOperation(value = "删除用户")
@@ -63,6 +75,12 @@ public class SysUserController {
     }
 
     //更新状态
-    //@ApiOperation(value = "更新状态")
+    @ApiOperation(value = "更新状态")
+    @GetMapping("updateStatus/{id}/{status}")
+    public Result updateStatus(@PathVariable Long id,@PathVariable Integer status){
+        sysUserService.updateStatus(id,status);
+        return Result.ok();
+    }
+
 }
 
