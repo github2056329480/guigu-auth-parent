@@ -1,4 +1,4 @@
-package com.atguigu.yuanwenjian.system;
+package com.atguigu.model.system;
 
 import com.atguigu.model.base.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -11,16 +11,14 @@ import lombok.Data;
 @ApiModel(description = "角色菜单")
 @TableName("sys_role_menu")
 public class SysRoleMenu extends BaseEntity {
-	
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "角色id")
-	@TableField("role_id")
-	private String roleId;
+    @ApiModelProperty(value = "角色id")
+    @TableField("role_id")
+    private String roleId;
 
-	@ApiModelProperty(value = "菜单id")
-	@TableField("menu_id")
-	private String menuId;
+    @ApiModelProperty(value = "菜单id")
+    @TableField("menu_id")
+    private String menuId;
 
 }
-

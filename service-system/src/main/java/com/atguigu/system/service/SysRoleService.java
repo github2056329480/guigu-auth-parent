@@ -1,5 +1,6 @@
 package com.atguigu.system.service;
 
+import com.atguigu.model.system.SysMenu;
 import com.atguigu.model.system.SysRole;
 import com.atguigu.model.vo.AssginRoleVo;
 import com.atguigu.model.vo.SysRoleQueryVo;
@@ -8,9 +9,12 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 
 public interface SysRoleService extends IService<SysRole> {
+
+
     /**
      * 分页查询及关键字查询
      * @param pageParam

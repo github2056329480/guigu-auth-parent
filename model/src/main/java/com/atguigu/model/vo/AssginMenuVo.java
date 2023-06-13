@@ -1,4 +1,4 @@
-package com.atguigu.yuanwenjian.vo;
+package com.atguigu.model.vo;
 
 
 import io.swagger.annotations.ApiModel;

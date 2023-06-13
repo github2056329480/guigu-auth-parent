@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
-            <scope>provided</scope>
+            <scope>provided</scope> <!--编译、测试时-->
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
